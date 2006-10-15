@@ -2,10 +2,10 @@ Summary:	xkill application
 Summary(pl):	Aplikacja xkill
 Name:		xorg-app-xkill
 Version:	1.0.1
-Release:	0.1
+Release:	1
 License:	MIT
 Group:		X11/Applications
-Source0:	http://xorg.freedesktop.org/releases/X11R7.0/src/app/xkill-%{version}.tar.bz2
+Source0:	http://xorg.freedesktop.org/releases/individual/app/xkill-%{version}.tar.bz2
 # Source0-md5:	f66d76abb0f75514ca32272e23cca757
 URL:		http://xorg.freedesktop.org/
 BuildRequires:	autoconf >= 2.57
@@ -46,5 +46,5 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc COPYING ChangeLog
-%attr(755,root,root) %{_bindir}/*
-%{_mandir}/man1/*.1x*
+%attr(755,root,root) %{_bindir}/xkill
+%{_mandir}/man1/xkill.1x*
