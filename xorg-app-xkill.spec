@@ -1,5 +1,5 @@
 Summary:	xkill application
-Summary(pl):	Aplikacja xkill
+Summary(pl.UTF-8):   Aplikacja xkill
 Name:		xorg-app-xkill
 Version:	1.0.1
 Release:	1
@@ -19,7 +19,7 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 xkill application.
 
-%description -l pl
+%description -l pl.UTF-8
 Aplikacja xkill.
 
 %prep
