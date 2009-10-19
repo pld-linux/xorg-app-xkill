@@ -1,26 +1,31 @@
-Summary:	xkill application
-Summary(pl.UTF-8):	Aplikacja xkill
+Summary:	xkill application to kill a client by its X resource
+Summary(pl.UTF-8):	Aplikacja xkill do zabijania klientów poprzez ich zasoby X
 Name:		xorg-app-xkill
-Version:	1.0.1
-Release:	2
+Version:	1.0.2
+Release:	1
 License:	MIT
 Group:		X11/Applications
 Source0:	http://xorg.freedesktop.org/releases/individual/app/xkill-%{version}.tar.bz2
-# Source0-md5:	f66d76abb0f75514ca32272e23cca757
+# Source0-md5:	dca031355b4afcf8517a8258eeb730c3
 URL:		http://xorg.freedesktop.org/
 BuildRequires:	autoconf >= 2.57
 BuildRequires:	automake
 BuildRequires:	pkgconfig >= 1:0.19
 # just xmuu
 BuildRequires:	xorg-lib-libXmu-devel
-BuildRequires:	xorg-util-util-macros >= 0.99.2
+BuildRequires:	xorg-util-util-macros >= 1.3
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-xkill application.
+xkill is a utility for forcing the X server to close connections to
+clients. This program is very dangerous, but is useful for aborting
+programs that have displayed undesired windows on a user's screen.
 
 %description -l pl.UTF-8
-Aplikacja xkill.
+Aplikacja xkill to narzędzie zmuszające serwer X do zamknięcia
+połączeń z klientami. Ten program jest bardzo niebezpieczny, ale
+przydatny do przerywania programów, które wyświetliły niepożądane
+okienka na ekranie użytkownika.
 
 %prep
 %setup -q -n xkill-%{version}
@@ -45,6 +50,6 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc COPYING ChangeLog
+%doc COPYING ChangeLog README
 %attr(755,root,root) %{_bindir}/xkill
 %{_mandir}/man1/xkill.1x*
