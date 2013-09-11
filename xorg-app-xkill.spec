@@ -1,18 +1,20 @@
 Summary:	xkill application to kill a client by its X resource
 Summary(pl.UTF-8):	Aplikacja xkill do zabijania klientów poprzez ich zasoby X
 Name:		xorg-app-xkill
-Version:	1.0.3
+Version:	1.0.4
 Release:	1
 License:	MIT
 Group:		X11/Applications
 Source0:	http://xorg.freedesktop.org/releases/individual/app/xkill-%{version}.tar.bz2
-# Source0-md5:	e7f0d57b6ba49c384e9cf8c9ff3243c1
+# Source0-md5:	0ae6bc2a8d3af68e9c76b1a6ca5f7a78
 URL:		http://xorg.freedesktop.org/
 BuildRequires:	autoconf >= 2.60
 BuildRequires:	automake
 BuildRequires:	pkgconfig >= 1:0.19
+BuildRequires:	xorg-lib-libX11-devel
 # just xmuu
 BuildRequires:	xorg-lib-libXmu-devel
+BuildRequires:	xorg-proto-xproto-devel >= 7.0.22
 BuildRequires:	xorg-util-util-macros >= 1.8
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
